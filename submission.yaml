@@ -1,26 +1,38 @@
 team:
-  name: "Janvi Patel"
+  name: "SafetySentinel"
   track: "AI"
   lead:
-    name: "Janvi Patel"
+    name: "Patel Janvi Dirgeshkumar"
     email: "23bph050@charusat.edu.in"
   members:
-    - name: "Priyanshi Thakkar"
-    - name: "Devanshi Pandit"
-    - name: "Divyraje Dabhi"
+    - name: "Thakkar Priyanshi"
+      email: "23bph098@charusat.edu.in"
+    - name: "Pandit Devanshi"
+      email: "23bph035@charusat.edu.in"
+    - name: "Dabhi Divyaraje"
+      email: "23bph008@charusat.edu.in"
+
 submission:
-  title: "SafetySentinel — Drug Safety Signal & CTD Readiness Copilot"
+  title: "SafetySentinel — Drug Safety Signal Detector & Regulatory Submission Readiness Checker"
   problem_statement: >
-    Pharmacovigilance teams face large volumes of adverse-event reports while regulatory teams
-    must review complex CTD dossiers for completeness. Manual review can delay identification of
-    emerging safety patterns and submission readiness gaps.
+    Pharmacovigilance teams need to identify emerging drug safety signals from
+    large volumes of adverse event reports, while regulatory teams must ensure
+    that complex CTD submissions are complete before filing. Manual analysis
+    and checklist-based review can be time-consuming and may allow important
+    safety signals or submission gaps to be overlooked.
+
   solution_summary: >
-    SafetySentinel provides two workflows: PRR-based adverse-event signal detection and
-    ICH M4 CTD outline completeness checking. It ranks potential safety signals, explains the
-    evidence, and produces a module-by-module readiness gap report.
+    SafetySentinel is an AI-assisted regulatory and pharmacovigilance tool with
+    two integrated modes. Signal Detection analyzes adverse event reports,
+    calculates proportional reporting ratio (PRR) and chi-square statistics,
+    and flags potential safety signals. Submission Readiness checks a CTD
+    dossier outline against an ICH M4-inspired checklist, scores module
+    completeness, and generates a gap report. IBM Bob supports the development
+    workflow through planning, implementation, debugging, and review.
+
   key_features:
-    - "Drug-event signal detection using 2x2 contingency tables and PRR"
-    - "Heuristic signal triage using PRR, case-count, and chi-square indicators"
-    - "ICH M4 CTD module completeness checker with actionable gap reporting"
-    - "Evidence tables and exportable reports for reviewer handoff"
-    - "IBM Bob-assisted development workflow with reproducible Bob prompts and review steps"
+    - "Adverse event signal detection using PRR and chi-square statistics"
+    - "Automated identification of potential drug-event safety signals"
+    - "CTD submission readiness assessment across Modules 1–5"
+    - "Module-wise completeness scoring and missing-section gap report"
+    - "IBM Bob-assisted development, debugging, testing, and code review"
