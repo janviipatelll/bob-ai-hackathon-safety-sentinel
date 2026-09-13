@@ -1,0 +1,26 @@
+team:
+  name: "Janvi Patel"
+  track: "AI"
+  lead:
+    name: "Janvi Patel"
+    email: "23bph050@charusat.edu.in"
+  members:
+    - name: "Priyanshi Thakkar"
+    - name: "Devanshi Pandit"
+    - name: "Divyraje Dabhi"
+submission:
+  title: "SafetySentinel — Drug Safety Signal & CTD Readiness Copilot"
+  problem_statement: >
+    Pharmacovigilance teams face large volumes of adverse-event reports while regulatory teams
+    must review complex CTD dossiers for completeness. Manual review can delay identification of
+    emerging safety patterns and submission readiness gaps.
+  solution_summary: >
+    SafetySentinel provides two workflows: PRR-based adverse-event signal detection and
+    ICH M4 CTD outline completeness checking. It ranks potential safety signals, explains the
+    evidence, and produces a module-by-module readiness gap report.
+  key_features:
+    - "Drug-event signal detection using 2x2 contingency tables and PRR"
+    - "Heuristic signal triage using PRR, case-count, and chi-square indicators"
+    - "ICH M4 CTD module completeness checker with actionable gap reporting"
+    - "Evidence tables and exportable reports for reviewer handoff"
+    - "IBM Bob-assisted development workflow with reproducible Bob prompts and review steps"

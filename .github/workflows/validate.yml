@@ -1,0 +1,43 @@
+name: Validate Submission
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install validation dependencies
+        run: pip install pyyaml
+      - name: Validate required structure
+        run: |
+          python - <<'PY'
+          import pathlib, yaml
+          root=pathlib.Path(".")
+          required=["submission.yaml","README.md","docs/problem-statement.md","docs/solution-overview.md","docs/architecture.md","docs/setup-guide.md","src","demo/demo-video-link.txt","demo/live-demo-url.txt","presentation","CONTRIBUTING.md"]
+          missing=[p for p in required if not (root/p).exists()]
+          if missing: raise SystemExit("Missing: "+", ".join(missing))
+          data=yaml.safe_load((root/"submission.yaml").read_text())
+          for key in ["team","submission"]:
+              if not data.get(key): raise SystemExit(f"Missing {key}")
+          if not data["team"].get("name") or not data["team"].get("lead",{}).get("email"): raise SystemExit("Fill team name and lead email")
+          if not data["submission"].get("title"): raise SystemExit("Missing submission title")
+          if "[" in (root/"README.md").read_text() or "YOUR_" in (root/"README.md").read_text():
+              print("WARNING: README still contains placeholders")
+          print("Structure validation passed.")
+          PY
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install application and test dependencies
+        run: pip install pytest -r src/requirements.txt
+      - name: Run unit tests
+        run: pytest src/tests/ -v --tb=short

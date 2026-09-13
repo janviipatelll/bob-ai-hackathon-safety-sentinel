@@ -1,0 +1,10 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+.streamlit/
+build/
+dist/
