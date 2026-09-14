@@ -13,7 +13,7 @@ team:
       email: "23bph008@charusat.edu.in"
 
 submission:
-  title: "SafetySentinel — Drug Safety Signal Detector & Regulatory Submission Readiness Checker"
+  title: "SafetySentinel - Drug Safety Signal Detector & Regulatory Submission Readiness Checker"
   problem_statement: >
     Pharmacovigilance teams need to identify emerging drug safety signals from
     large volumes of adverse event reports, while regulatory teams must ensure
@@ -33,6 +33,6 @@ submission:
   key_features:
     - "Adverse event signal detection using PRR and chi-square statistics"
     - "Automated identification of potential drug-event safety signals"
-    - "CTD submission readiness assessment across Modules 1–5"
+    - "CTD submission readiness assessment across Modules 1-5"
     - "Module-wise completeness scoring and missing-section gap report"
     - "IBM Bob-assisted development, debugging, testing, and code review"
