@@ -5,7 +5,7 @@
 
 ## Team
 - **Lead:** Janvi Patel — `23bph050@charusat.edu.in`
-- **Members:** Priyanshi Thakkar, Devanshi Pandit, Divyraje Dabhi
+- **Members:** Priyanshi Thakkar, Devanshi Pandit, Divyaraje Dabhi
 
 ## Problem Statement
 Pharmacovigilance teams must review large volumes of adverse-event reports to identify emerging drug-event patterns. Regulatory teams separately review very large CTD dossiers for missing or incomplete sections. SafetySentinel brings these two review-heavy workflows into one reproducible interface.
